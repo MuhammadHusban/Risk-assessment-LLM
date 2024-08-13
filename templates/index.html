@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="chatContainer">
+        <div id="chatHeader">Banking Chatbot</div>
+
+        <!-- Customer ID Input Section -->
+        <div id="customerIdSection">
+            <p>Please enter your Customer ID to start:</p>
+            <input type="text" id="customerId" placeholder="Enter your Customer ID" autofocus />
+            <button onclick="startChat()">Submit</button>
+        </div>
+
+        <!-- Loading Indicator Section (Hidden by Default) -->
+        <div id="loadingSection" style="display:none;">
+            <p>Processing your request, please wait...</p>
+            <div id="loadingSpinner"></div>
+        </div>
+
+        <!-- Chat Section (Hidden by Default) -->
+        <div id="chatSection" style="display:none;">
+            <div id="chatOutput"></div>
+            <div id="chatInputContainer">
+                <input type="text" id="message" placeholder="Type your message here..." />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

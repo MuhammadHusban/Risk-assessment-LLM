@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+}
+
+#chatContainer {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#chatHeader {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#chatOutput {
+    padding: 20px;
+    height: 500px;
+    overflow-y: auto;
+    background-color: #f1f1f1;
+    flex-grow: 1;
+}
+
+#chatOutput p {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 75%;
+}
+
+#chatOutput .user {
+    text-align: right;
+    background-color: #007bff;
+    color: #ffffff;
+    margin-left: auto;
+}
+
+#chatOutput .bot {
+    text-align: left;
+    background-color: #e1e1e1;
+    color: #333;
+    margin-right: auto;
+}
+
+#chatInputContainer {
+    padding: 20px;
+    background-color: #ffffff;
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+#chatInputContainer input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#chatInputContainer button {
+    padding: 15px 25px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#loadingSection {
+    text-align: center;
+    padding: 20px;
+}
+
+#loadingSpinner {
+    margin: 20px auto;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+#chatOutput p {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 75%;
+}
+
+#chatOutput .user {
+    text-align: right;
+    background-color: #007bff;
+    color: #ffffff;
+    margin-left: auto;
+}
+
+#chatOutput .bot {
+    text-align: left;
+    background-color: #e1e1e1;
+    color: #333;
+    margin-right: auto;
+}
+
+.bot.typing {
+    font-style: italic;
+    color: #666;
+}
